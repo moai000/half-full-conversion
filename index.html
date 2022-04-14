@@ -55,20 +55,23 @@
 	</table>
 	</form>
 
-		<p class="hyouki">今回のみ適用したい表記</p>
+		<p class="hyouki title">特別に変換したい表記</p>
 		<div id="spreadsheet"></div>
-		<input type="button" value="追加" onclick="addRow()">
 </div>
 
 	<div class="inner">
 		<ul id="textAreaUl" class="textAreaUl">
 			<li class="textArea">
-				<p>変換対象のテキスト</p>
+				<p class="title">チェックしたい文章をこちらへ</p>
 				<textarea id="text" rows="6" cols="40"></textarea><br/>
 				<input type="button" id="henkan" value="変換" onclick="henkan()"/><input type="button" class="reset" value="消去" onclick="reset()" />
 			</li>
-			<li class="textArea" id="highlightLi"></li>
+			<li class="textArea" id="highlightLi">
+				<p class="title">置換対象のハイライト</p>
+				<div id="highlightInput"></div>
+			</li>
 			<li class="textArea">
+				<p class="title">変換後の文章</p>
 				<textarea id="result" readonly="readonly" rows="6" cols="40"></textarea><br/>
 				<input type="button" class="copy" value="コピー" onclick="copy()"/>
 			</li>

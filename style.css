@@ -84,14 +84,17 @@ ul.textAreaUl {
 }
 li#highlightLi {
 	margin-bottom: 20px;
-	display: none;
 }
-li#highlightLi div {
+li#highlightLi div#highlightInput {
 	padding: 5px;
 	min-width: 300px;
 	min-height: 80px;
 	border: 1px solid #c0c0c0;
 	overflow: auto;
+}
+p.title {
+	font-weight: bold;
+	font-size: 110%;
 }
 footer {
     background: #000;

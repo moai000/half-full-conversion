@@ -27,15 +27,6 @@ let hot = new Handsontable(container, {
 });
 
 /**
- * 追加変換  行追加
- */
-function addRow() {
-    hot.alter('insert_row', hot.countRows());
-    var col = hot.propToCol(COL_PRODUCTCODE);
-    hot.selectCell(hot.countRows() - 1, col);
-}
-
-/**
  * 追加変換  項目取得
  */
  let array = {};
@@ -244,11 +235,8 @@ let regStr = function(){
  */
 function highlightStr(strInput,list){
 	let highlightStr = ''
-	let li = document.getElementById("highlightLi")
+	let div = document.getElementById("highlightInput")
 	if(strInput!=='') {
-		let div = document.createElement("div");
-		div.id = 'highlightInput';
-
 		// 半角全角変換対象文字ハイライト
 		for(let i=0;i<strInput.length;i++){
 			let str = strInput.substr(i,1)
@@ -262,21 +250,14 @@ function highlightStr(strInput,list){
 		}
 
 		highlightStr = highlightStr.replace(new RegExp(/\n/||/\r/||/\r\n/, 'g'), '<br/>')
-		let divBef = document.getElementById("highlightInput")
-		if (nullChk(divBef)!=='' ){
-			li.removeChild(divBef)
-		}
-
 		div.innerHTML = highlightStr
-		li.append(div);
-		li.style.display = 'block' 
 	}else {
-		li.style.display = 'none'
+		div.innerHTML = ''
 	}
 }
 
 /**
- * 変換対象ハイライト(span挿入)
+ * 変換対象ハイライト(半角全角変換)
  */
  function highlightIns(strInput, list){
 
