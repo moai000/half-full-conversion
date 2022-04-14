@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css">
+<link href="./handsontable/handsontable.full.min.css" rel="stylesheet" type="text/css">
+<title>全角半角変換ツール</title>
+</head>
+<body>
+<div id="container">
+<div id="title">
+	全角半角変換ツール
+</div>
+	<noscript><p class="error-message">このサービスをご利用いただくには、JavaScriptを有効にする必要があります。</p></noscript>
+	<form id="text-form">
+	<table class="standard">
+		<tr>
+			<th></th>
+			<th>数字</th>
+			<th>英字</th>
+			<th>カナ</th>
+			<th>記号</th>
+			<th>空白</th>
+			<th>一括指定</th>
+		</tr>
+		<tr>
+			<td>全角</td>
+			<td><input type="radio" name="number" value="full" /></td>
+			<td><input type="radio" name="latin" value="full" /></td>
+			<td><input type="radio" name="kana" value="full" /></td>
+			<td><input type="radio" name="symbol" value="full" /></td>
+			<td><input type="radio" name="space" value="full" /></td>
+			<td class="allToZenkaku" onclick="allToZenkaku()">全て全角</td>
+		</tr>
+		<tr>
+			<td>半角</td>
+			<td><input type="radio" name="number" value="half" /></td>
+			<td><input type="radio" name="latin" value="half" /></td>
+			<td><input type="radio" name="kana" value="half" /></td>
+			<td><input type="radio" name="symbol" value="half" /></td>
+			<td><input type="radio" name="space" value="half" /></td>
+			<td class="allToHankaku" onclick="allToHankaku()">全て半角</td>
+		</tr>
+		<tr>
+			<td>変換なし</td>
+			<td><input type="radio" name="number" value="" checked="checked" /></td>
+			<td><input type="radio" name="latin" value="" checked="checked"  /></td>
+			<td><input type="radio" name="kana" value="" checked="checked" /></td>
+			<td><input type="radio" name="symbol" value="" checked="checked" /></td>
+			<td><input type="radio" name="space" value="" checked="checked" /></td>
+			<td></td>
+		</tr>
+	</table>
+	</form>
+
+	<div class="hyouki">
+		<p class="hyouki">今回のみ適用したい表記</p>
+		<div id="spreadsheet"></div>
+	</div>
+
+	<div class="inner">
+		<ul id="textAreaUl" class="textAreaUl">
+			<li class="textArea">
+				<p>変換対象のテキスト</p>
+				<textarea id="text" rows="6" cols="40"></textarea><br/>
+				<input type="button" id="henkan" value="変換" onclick="henkan()"/><input type="button" class="reset" value="消去" onclick="reset()" />
+			</li>
+			<li class="textArea" id="highlightLi"></li>
+			<li class="textArea">
+				<textarea id="result" readonly="readonly" rows="6" cols="40"></textarea><br/>
+				<input type="button" class="copy" value="コピー" onclick="copy()"/>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="ad">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 全角/半角ツール -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-6029083444248381"
+		 data-ad-slot="9849387242"
+		 data-ad-format="auto"
+		 data-full-width-responsive="true"></ins>
+	<script>
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<footer>
+	<p><a href="https://estlinks.co.jp/">© estlinks</a></p>	
+</footer>
+<script src="./handsontable/handsontable.full.min.js"></script>
+<script type="text/javascript" src="henkan.js"></script>
+</body>
+</html>

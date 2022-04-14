@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.error-message {
+	margin-bottom: 20px;
+}
+#title {
+    margin: 0 auto 2rem;
+    color: #00008b;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 20px solid #00008b;
+    background-color: white;
+    text-indent: 20px;
+    line-height: 60px;
+}
+#container{
+	width: 60%;
+	height: 200vh;
+	background-color: white;
+	margin:0 auto;
+	padding: 20px 10px;
+}
+table {
+	border-collapse: collapse;
+	text-align: center;
+	margin-bottom: 20px;
+}
+table th, table td {
+	padding: 10px;
+	margin-bottom: 20px;
+	border: solid 1px #c0c0c0;
+}
+th {
+	color: white;
+	background-color: #00008b;
+}
+td.allToZenkaku, td.allToHankaku {
+	color: #00008b;
+}
+td.allToZenkaku:hover, td.allToHankaku:hover {
+	color: white;
+	background-color: #00008b;
+	cursor: pointer;
+}
+p.addRowsText {
+	font-size: 0.8em;
+}
+.inner {
+	margin-top: 30px;
+}
+.wrap {
+	text-align: right;
+	padding-bottom: 50px;
+}
+textarea {
+	border-color: #c0c0c0;
+	width: 100%
+}
+input[type="button"] {
+	margin: 10px 0 10px 10px;
+	padding: 2px 8px;
+}
+#henkan {
+	background-color: skyblue;
+	color: white;
+	border: 2px solid skyblue;
+}
+#henkan:hover {
+	background-color: blue;
+	border: 2px solid blue;
+	cursor: pointer;
+}
+.highlight {
+	background-color: yellow;
+}
+ul {
+	list-style-type: none;
+}
+ul.textAreaUl {
+	margin-bottom: 20px;
+}
+li#highlightLi {
+	margin-bottom: 20px;
+	display: none;
+}
+li#highlightLi div {
+	padding: 5px;
+	min-width: 300px;
+	min-height: 80px;
+	border: 1px solid #c0c0c0;
+}
+footer {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10000000;
+    margin: 10rem 0 0;
+}
+footer a{
+	color:#fff;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+	/* スマホ用 */
+	#container{
+		width: 100%;
+		padding: 20px 10px;
+	}
+	#title {
+	    width: 100%;
+	}
+	.wrap {
+		padding-bottom: 0;
+	}
+	div.hyouki {
+		margin-left: 20px;
+	}
+	input[type="button"] {
+		width: 70px;
+    	height: 35px;
+    	font-size: 1em;
+	}
+	table, .inner {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	table th, table td {
+		padding: 3px;
+		margin-bottom: 20px;
+	}
+	ul.textAreaUl {
+		display: block;
+	}
+	li#highlightLi {
+		margin-left: 0;
+	}
+}
